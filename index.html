@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <meta name="description" content="Gimnasia Cerebral para Adultos 50+ - Ejercicios de 1-2 min para tu memoria y agilidad mental">
+    <meta name="theme-color" content="#0D0036">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Gimnasia Cerebral para Adultos 50+ | Evolucione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://img.youtube.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0D0036;--purple:#651FFF;--cyan:#18FFFF;--magenta:#FF0C88;--coral:#F34D47;--orange:#FFA111;--white:#FFF;--gray:#b8b8d0}
+        *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+        html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+        body{font-family:'Poppins',-apple-system,sans-serif;background:var(--bg);color:var(--white);line-height:1.5;overflow-x:hidden;font-size:16px;-webkit-font-smoothing:antialiased}
+        img{max-width:100%;height:auto;display:block}
+        .container{width:100%;max-width:600px;margin:0 auto;padding:0 1rem}
+        header{padding:1rem 0;text-align:center;background:rgba(13,0,54,.95);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+        .logo{height:55px;width:auto;display:block;margin:0 auto}
+        .live{position:fixed;top:75px;left:1rem;background:var(--coral);padding:.35rem .7rem;border-radius:20px;font-size:.7rem;font-weight:700;z-index:99;display:flex;align-items:center;gap:.35rem;box-shadow:0 2px 10px rgba(243,77,71,.4)}
+        .live-dot{width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1s infinite}
+        @keyframes blink{50%{opacity:.3}}
+        .hero{padding:1rem 0 .75rem;text-align:center}
+        .badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(24,255,255,.15);border:1px solid rgba(24,255,255,.3);padding:.4rem .9rem;border-radius:20px;font-size:.75rem;color:var(--cyan);font-weight:500;margin-bottom:.75rem}
+        .badge-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+        h1{font-size:1.5rem;font-weight:800;line-height:1.2;margin-bottom:.6rem;background:linear-gradient(135deg,var(--white),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .subtitle{font-size:.9rem;color:var(--gray);margin-bottom:.75rem;font-weight:500}
+        .social{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:.5rem}
+        .avatars{display:flex}
+        .avatar{width:28px;height:28px;border-radius:50%;border:2px solid var(--bg);margin-left:-8px;object-fit:cover}
+        .avatar:first-child{margin-left:0}
+        .social-text{font-size:.75rem;color:var(--gray)}
+        .social-text b{color:var(--cyan)}
+        .video-section{padding:.5rem 0}
+        .video-wrap{position:relative;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 0 0 2px rgba(255,12,136,.5),0 10px 40px rgba(0,0,0,.5)}
+        .video-box{position:relative;padding-bottom:56.25%}
+        .thumb{position:absolute;inset:0;z-index:5;cursor:pointer}
+        .thumb img{width:100%;height:100%;object-fit:cover}
+        .thumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 50%)}
+        .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+        .play-circle{width:70px;height:70px;border-radius:50%;background:var(--magenta);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(255,12,136,.6);margin:0 auto}
+        .play-circle svg{width:28px;height:28px;fill:#fff;margin-left:3px}
+        .play-text{margin-top:.75rem;font-size:.95rem;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+        .vid-badge{position:absolute;top:10px;left:10px;background:var(--coral);padding:.3rem .6rem;border-radius:4px;font-size:.65rem;font-weight:700}
+        .vid-time{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.8);padding:.25rem .5rem;border-radius:4px;font-size:.7rem;font-weight:600}
+        .vid-frame{position:absolute;inset:0;width:100%;height:100%;border:0}
+        .blocker{position:absolute;inset:0;z-index:4}
+        .hidden{display:none!important}
+        .timer-section{padding:1rem 0;text-align:center}
+        .timer-box{display:inline-block;background:linear-gradient(135deg,rgba(255,12,136,.2),rgba(101,31,255,.15));border:2px solid rgba(255,12,136,.5);border-radius:16px;padding:1rem 1.5rem}
+        .lock-icon{font-size:1.8rem;margin-bottom:.25rem}
+        .timer-label{font-size:.8rem;color:var(--gray);margin-bottom:.2rem}
+        .timer-display{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,var(--magenta),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-variant-numeric:tabular-nums;letter-spacing:1px}
+        .timer-sub{font-size:.75rem;color:var(--cyan);margin-top:.25rem;font-weight:500}
+        .progress-bar{width:100%;max-width:220px;height:5px;background:rgba(255,255,255,.1);border-radius:10px;margin:.6rem auto 0;overflow:hidden}
+        .progress-fill{height:100%;background:linear-gradient(90deg,var(--magenta),var(--orange));border-radius:10px;width:0%;transition:width 1s linear}
+        .mystery{display:block;margin-top:.5rem;padding:.4rem .8rem;background:rgba(255,161,17,.15);border:1px dashed rgba(255,161,17,.5);border-radius:8px;font-size:.75rem;color:var(--orange);font-weight:600}
+        .wa-inline{display:inline-flex;align-items:center;gap:.5rem;margin-top:.75rem;padding:.6rem 1rem;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);border-radius:25px;color:#25D366;font-weight:600;text-decoration:none;font-size:.85rem;transition:background .2s}
+        .wa-inline:active{background:#25D366;color:#fff}
+        .wa-inline svg{width:18px;height:18px;fill:currentColor}
+        .popup-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:1000;padding:.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}
+        .popup-bg.show{display:flex;align-items:flex-start;justify-content:center}
+        .popup{background:linear-gradient(135deg,#1a0a30,var(--bg));border:2px solid var(--magenta);border-radius:20px;width:100%;max-width:400px;margin:auto;position:relative;animation:popUp .4s ease}
+        @keyframes popUp{from{transform:scale(.9) translateY(20px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+        .popup-close{position:absolute;top:10px;right:10px;width:32px;height:32px;background:rgba(255,255,255,.1);border:0;border-radius:50%;color:var(--gray);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5}
+        .popup-close:active{background:var(--coral);color:#fff}
+        .urg-header{background:var(--coral);color:#fff;text-align:center;padding:.5rem;font-size:.75rem;font-weight:700;border-radius:18px 18px 0 0}
+        .popup-head{text-align:center;padding:1.25rem 1rem .75rem;background:linear-gradient(135deg,rgba(255,12,136,.15),rgba(101,31,255,.1))}
+        .popup-emoji{font-size:1.75rem;margin-bottom:.25rem}
+        .popup-badge{display:inline-block;background:linear-gradient(135deg,var(--magenta),var(--orange));padding:.4rem 1rem;border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+        .popup-title{font-size:1.15rem;font-weight:800;margin-top:.5rem;background:linear-gradient(135deg,var(--white),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .popup-body{padding:1rem}
+        .pop-timer{background:rgba(243,77,71,.15);border:2px solid var(--coral);border-radius:12px;padding:.75rem;text-align:center;margin-bottom:1rem}
+        .pop-timer-label{font-size:.7rem;color:var(--coral);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+        .pop-timer-num{font-size:2rem;font-weight:800;color:var(--white);font-variant-numeric:tabular-nums;letter-spacing:2px}
+        .pop-timer-sub{font-size:.65rem;color:var(--gray)}
+        .price-box{text-align:center;padding:.75rem;background:rgba(0,0,0,.3);border-radius:12px;margin-bottom:.75rem}
+        .price-label{font-size:.65rem;color:var(--gray);text-transform:uppercase;letter-spacing:.5px}
+        .price-old{font-size:1.2rem;color:var(--coral);text-decoration:line-through;font-weight:600}
+        .price-new{font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--white),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin:.2rem 0}
+        .price-new span{font-size:1.5rem}
+        .savings{display:inline-block;background:linear-gradient(135deg,#00b894,var(--cyan));color:var(--bg);padding:.35rem .9rem;border-radius:20px;font-size:.8rem;font-weight:700}
+        .scarcity{display:flex;align-items:center;justify-content:center;gap:.4rem;background:rgba(255,161,17,.15);border:1px solid rgba(255,161,17,.4);border-radius:8px;padding:.5rem;margin-bottom:.75rem;font-size:.75rem;color:var(--orange);font-weight:600}
+        .scarcity-dot{width:6px;height:6px;background:var(--orange);border-radius:50%;animation:blink 1s infinite}
+        .features{background:rgba(255,255,255,.03);border-radius:10px;padding:.6rem;margin-bottom:.75rem}
+        .feature{display:flex;align-items:center;gap:.4rem;padding:.3rem 0;font-size:.8rem}
+        .feature-check{width:16px;height:16px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;flex-shrink:0}
+        .cta-btn{display:block;width:100%;background:linear-gradient(135deg,var(--magenta),var(--orange));color:#fff;padding:1rem;border:0;border-radius:12px;font-family:inherit;font-size:1rem;font-weight:700;text-decoration:none;text-align:center;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 8px 25px rgba(255,12,136,.4);cursor:pointer;min-height:52px}
+        .cta-btn:active{transform:scale(.98)}
+        .wa-popup{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.6rem;padding:.6rem;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);border-radius:10px;color:#25D366;font-weight:600;text-decoration:none;font-size:.8rem}
+        .wa-popup:active{background:#25D366;color:#fff}
+        .wa-popup svg{width:16px;height:16px;fill:currentColor}
+        .trust{display:flex;justify-content:center;gap:.75rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.1)}
+        .trust-item{text-align:center;font-size:.6rem;color:var(--gray)}
+        .trust-item span:first-child{display:block;font-size:1rem;margin-bottom:.15rem}
+        .content{display:none;padding-bottom:80px}
+        .content.show{display:block}
+        .section{padding:1.5rem 0}
+        .section-title{font-size:1.2rem;font-weight:700;text-align:center;margin-bottom:.75rem}
+        .problems{display:grid;gap:.5rem}
+        .problem{display:flex;align-items:center;gap:.6rem;padding:.75rem;background:rgba(243,77,71,.1);border:1px solid rgba(243,77,71,.25);border-radius:10px;font-size:.85rem;font-weight:500}
+        .problem-icon{font-size:1.1rem}
+        .solution-grid{display:flex;flex-direction:column;gap:1rem}
+        .solution-img{max-width:200px;margin:0 auto}
+        .solution-list{list-style:none}
+        .solution-list li{display:flex;align-items:flex-start;gap:.5rem;padding:.5rem 0;font-size:.85rem}
+        .sol-check{width:18px;height:18px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.6rem;flex-shrink:0;margin-top:2px}
+        .testimonials{display:flex;flex-direction:column;gap:.75rem}
+        .testimonial{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem}
+        .test-text{font-size:.85rem;color:var(--gray);font-style:italic;margin-bottom:.75rem;line-height:1.5}
+        .test-author{display:flex;align-items:center;gap:.6rem}
+        .test-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--purple)}
+        .test-name{font-size:.85rem;font-weight:600}
+        .test-role{font-size:.7rem;color:var(--gray)}
+        .instructor{display:flex;align-items:center;gap:1rem;padding:1rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px}
+        .inst-img{width:80px;height:80px;border-radius:12px;object-fit:cover;border:2px solid var(--purple);flex-shrink:0}
+        .inst-name{font-size:1rem;font-weight:700}
+        .inst-role{font-size:.75rem;color:var(--cyan);margin-bottom:.25rem}
+        .inst-bio{font-size:.75rem;color:var(--gray)}
+        .sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to top,var(--bg) 80%,transparent);padding:.75rem;z-index:99}
+        .sticky.show{display:block}
+        .sticky-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;max-width:400px;margin:0 auto;background:linear-gradient(135deg,var(--magenta),var(--orange));color:#fff;padding:.9rem;border:0;border-radius:12px;font-family:inherit;font-size:.95rem;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:0 -4px 20px rgba(255,12,136,.4);min-height:50px}
+        .sticky-timer{font-size:.75rem;font-weight:500;opacity:.9}
+        .wa-float{position:fixed;bottom:70px;right:.75rem;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,.4);z-index:98;text-decoration:none}
+        .wa-float svg{width:26px;height:26px;fill:#fff}
+        footer{text-align:center;padding:1.5rem 1rem;border-top:1px solid rgba(255,255,255,.05);color:var(--gray);font-size:.7rem}
+        footer img{height:28px;margin:0 auto .5rem;opacity:.7}
+        .skip-btn{display:none;margin-top:1rem;padding:1rem 2rem;background:linear-gradient(135deg,var(--magenta),var(--orange));border:none;color:#fff;border-radius:16px;font-family:inherit;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all .3s ease;box-shadow:0 8px 25px rgba(255,12,136,.4);text-transform:uppercase;letter-spacing:.5px}
+        .skip-btn.show{display:inline-block}
+        .skip-btn.pulse{animation:skipPulse 1s infinite}
+        @keyframes skipPulse{0%,100%{transform:scale(1);box-shadow:0 8px 25px rgba(255,12,136,.4)}50%{transform:scale(1.05);box-shadow:0 12px 35px rgba(255,12,136,.6)}}
+        .skip-btn:active{transform:scale(.97)}
+        @media(min-width:600px){.container{max-width:700px}h1{font-size:2rem}.play-circle{width:85px;height:85px}.play-circle svg{width:34px;height:34px}.timer-display{font-size:2.8rem}.popup{max-width:480px}.price-new{font-size:3.5rem}.testimonials{flex-direction:row}.testimonial{flex:1}.solution-grid{flex-direction:row;align-items:center}.solution-img{max-width:250px}}
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+    </style>
+</head>
+<body>
+    <header><img src="assets/logo-evolucione-1-scaled.png" alt="Evolucione" class="logo" width="180" height="55"></header>
+    <div class="live"><span class="live-dot"></span><span id="viewers">38</span> viendo</div>
+    <section class="hero"><div class="container">
+        <div class="badge"><span class="badge-dot"></span>+500 adultos lo usan</div>
+        <h1>Mantén tu mente ágil después de los 50</h1>
+        <p class="subtitle">Gimnasia cerebral en casa. Ejercicios de 1-2 minutos.</p>
+        <div class="social"><div class="avatars"><img src="assets/Maria.jpg" class="avatar" alt="" width="28" height="28"><img src="assets/roberto.jpg" class="avatar" alt="" width="28" height="28"><img src="assets/claudia.jpg" class="avatar" alt="" width="28" height="28"></div><span class="social-text"><b>93%</b> lo recomiendan</span></div>
+    </div></section>
+    <section class="video-section"><div class="container">
+        <div class="video-wrap"><div class="video-box">
+            <div class="thumb" id="thumb">
+                <img src="https://img.youtube.com/vi/0edke-GiNw8/mqdefault.jpg" alt="Video" width="480" height="360">
+                <div class="thumb-overlay"></div>
+                <div class="vid-badge">🔥 Oferta al final</div>
+                <div class="play-btn"><div class="play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><p class="play-text">▶ Ver video</p></div>
+                <div class="vid-time">3:48</div>
+            </div>
+            <div class="blocker hidden" id="blocker"></div>
+            <iframe id="frame" class="vid-frame hidden" src="" title="Video" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div></div>
+    </div></section>
+    <section class="timer-section"><div class="container">
+        <div class="timer-box">
+            <div class="lock-icon" id="lock">🔒</div>
+            <div class="timer-label">Tu oferta se desbloquea en:</div>
+            <div class="timer-display" id="timer">03:48</div>
+            <div class="mystery" id="mystery">🎁 Descuento sorpresa al final...</div>
+            <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+        </div><br>
+        <button class="skip-btn" id="skipBtn">🎁 YA QUIERO VER MI OFERTA →</button><br>
+        <a href="https://wa.me/5213311138538?text=Hola%20EMA%20Adultos%20🧠%20Tengo%20dudas%20del%20curso" class="wa-inline" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>¿Dudas?</a>
+    </div></section>
+    <div class="popup-bg" id="popup"><div class="popup">
+        <button class="popup-close" onclick="closePopup()" aria-label="Cerrar">×</button>
+        <div class="urg-header">⚠️ Oferta expira en <span id="miniTimer">30:00</span></div>
+        <div class="popup-head"><div class="popup-emoji">🎉</div><div class="popup-badge">🔓 ¡DESBLOQUEADO!</div><h2 class="popup-title">Tu descuento está listo</h2></div>
+        <div class="popup-body">
+            <div class="pop-timer"><div class="pop-timer-label">🔥 EXPIRA EN:</div><div class="pop-timer-num" id="popTimer">29:59</div><div class="pop-timer-sub">Después vuelve a $2,200</div></div>
+            <div class="price-box"><div class="price-label">Precio normal</div><div class="price-old">$2,200 MXN</div><div class="price-label" style="color:var(--cyan);margin-top:.3rem">AHORA:</div><div class="price-new"><span>$</span>300</div><div class="savings">💰 Ahorras $1,900</div></div>
+            <div class="scarcity"><span class="scarcity-dot"></span><span id="spots">Solo 6 lugares</span></div>
+            <div class="features"><div class="feature"><span class="feature-check">✓</span> 24 ejercicios de 1-2 min</div><div class="feature"><span class="feature-check">✓</span> 4 clases extra</div><div class="feature"><span class="feature-check">✓</span> Comunidad de apoyo</div><div class="feature"><span class="feature-check">✓</span> Acceso de por vida</div></div>
+            <a href="https://pay.hotmart.com/C103235667V?checkoutMode=10" class="cta-btn">¡QUIERO MI DESCUENTO!</a>
+            <a href="https://wa.me/5213311138538?text=Hola%20EMA%20Adultos%20🧠%20Quiero%20info%20del%20curso%20con%20descuento" class="wa-popup" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>¿Dudas? WhatsApp</a>
+            <div class="trust"><div class="trust-item"><span>🔒</span>Pago seguro</div><div class="trust-item"><span>✅</span>7 días garantía</div><div class="trust-item"><span>♾️</span>Acceso siempre</div></div>
+        </div>
+    </div></div>
+    <div class="content" id="content">
+        <section class="section"><div class="container"><h2 class="section-title">¿Te identificas?</h2><div class="problems"><div class="problem"><span class="problem-icon">🧠</span>Olvidas dónde dejaste las cosas</div><div class="problem"><span class="problem-icon">💭</span>Cuesta recordar nombres</div><div class="problem"><span class="problem-icon">🔍</span>Te distraes más fácil</div><div class="problem"><span class="problem-icon">⏱️</span>Procesas info más lento</div><div class="problem"><span class="problem-icon">😟</span>Te preocupa perder agilidad mental</div></div></div></section>
+        <section class="section"><div class="container"><h2 class="section-title">La solución</h2><div class="solution-grid"><img src="assets/EMA_BENEFICIOS__1_.png" class="solution-img" alt="Beneficios" width="200" height="200" loading="lazy"><ul class="solution-list"><li><span class="sol-check">✓</span><span><b>Ejercicios sencillos</b> de 1-2 minutos</span></li><li><span class="sol-check">✓</span><span><b>Mejora tu memoria</b> y concentración</span></li><li><span class="sol-check">✓</span><span><b>Mantén tu mente activa</b> sin complicaciones</span></li><li><span class="sol-check">✓</span><span><b>Resultados visibles</b> en semanas</span></li></ul></div></div></section>
+        <section class="section"><div class="container"><h2 class="section-title">Testimonios reales</h2><div class="testimonials"><div class="testimonial"><p class="test-text">"Recuperé confianza. Ya no olvido tanto las cosas."</p><div class="test-author"><img src="assets/Maria.jpg" class="test-avatar" alt="María" width="40" height="40" loading="lazy"><div><div class="test-name">María González</div><div class="test-role">62 años</div></div></div></div><div class="testimonial"><p class="test-text">"Ejercicios fáciles y efectivos. Los hago en casa."</p><div class="test-author"><img src="assets/roberto.jpg" class="test-avatar" alt="Roberto" width="40" height="40" loading="lazy"><div><div class="test-name">Roberto Sánchez</div><div class="test-role">58 años</div></div></div></div><div class="testimonial"><p class="test-text">"Mi mente está más clara y ágil ahora."</p><div class="test-author"><img src="assets/claudia.jpg" class="test-avatar" alt="Claudia" width="40" height="40" loading="lazy"><div><div class="test-name">Claudia Ramírez</div><div class="test-role">65 años</div></div></div></div></div></div></section>
+        <section class="section"><div class="container"><div class="instructor"><img src="assets/ema_milena_4.png" class="inst-img" alt="Milena" width="80" height="80" loading="lazy"><div><div class="inst-name">Milena Sandoval</div><div class="inst-role">Especialista en Gimnasia Cerebral</div><p class="inst-bio">+20 años ayudando a adultos mayores.</p></div></div></div></section>
+    </div>
+    <div class="sticky" id="sticky"><a href="https://pay.hotmart.com/C103235667V?checkoutMode=10" class="sticky-btn">¡MI DESCUENTO! <span class="sticky-timer">⏰ <span id="stickyTimer">29:59</span></span></a></div>
+    <a href="https://wa.me/5213311138538?text=Hola%20EMA%20Adultos%20🧠%20Quiero%20más%20información" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <footer><img src="assets/logo-evolucione-1-scaled.png" alt="Evolucione" width="100" height="28" loading="lazy"><p>© 2025 Evolucione</p></footer>
+    <script>
+    !function(){var s=0,e=0,t=228,p=29,o=59,c=6,thumb=document.getElementById("thumb"),frame=document.getElementById("frame"),blocker=document.getElementById("blocker"),timer=document.getElementById("timer"),lock=document.getElementById("lock"),prog=document.getElementById("progress"),popup=document.getElementById("popup"),content=document.getElementById("content"),sticky=document.getElementById("sticky"),skipBtn=document.getElementById("skipBtn"),mystery=document.getElementById("mystery"),isMob=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),vidUrl=isMob?"https://www.youtube.com/embed/0edke-GiNw8?autoplay=1&playsinline=1&rel=0":"https://www.youtube.com/embed/0edke-GiNw8?autoplay=1&playsinline=1&controls=0&rel=0&disablekb=1&fs=0";setInterval(function(){document.getElementById("viewers").textContent=35+Math.floor(12*Math.random())},7e3),thumb.addEventListener("click",function(){s||(s=1,thumb.classList.add("hidden"),frame.src=vidUrl,frame.classList.remove("hidden"),isMob||blocker.classList.remove("hidden"),function(){var n=setInterval(function(){t--;var s=Math.floor(t/60),e=t%60;timer.textContent=(s<10?"0":"")+s+":"+(e<10?"0":"")+e,prog.style.width=(228-t)/228*100+"%";if(t===218){content.classList.add("show");mystery.innerHTML="🎁 ¡Info desbloqueada abajo!"}if(t===198){skipBtn.classList.add("show")}if(t===183){skipBtn.classList.add("pulse")}if(t<=7){clearInterval(n),lock.textContent="🔓",timer.textContent="¡LISTO!",showPop()}},1e3)}())}),skipBtn.addEventListener("click",function(){showPop()}),window.closePopup=function(){popup.classList.remove("show"),document.body.style.overflow="",sticky.classList.add("show")},popup.addEventListener("click",function(s){s.target===popup&&closePopup()});var showPop=function(){e||(e=1,skipBtn.classList.remove("show"),popup.classList.add("show"),document.body.style.overflow="hidden",setInterval(function(){o>0?o--:p>0&&(p--,o=59);var s=(p<10?"0":"")+p+":"+(o<10?"0":"")+o;document.getElementById("popTimer").textContent=s,document.getElementById("miniTimer").textContent=s,document.getElementById("stickyTimer").textContent=s,p<5&&(document.getElementById("popTimer").style.color="#F34D47")},1e3))};setInterval(function(){c>2&&Math.random()>.7&&(c--,document.getElementById("spots").textContent="Solo "+c+" lugares")},4e4),document.addEventListener("keydown",function(s){"Escape"===s.key&&closePopup()})}();
+    </script>
+</body>
+</html>

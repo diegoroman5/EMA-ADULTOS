@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "gimnasia-cerebral-adultos",
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
